@@ -1,1 +1,9 @@
 <h1><%= @recipe.name %></h1>
+<p>Author: <%= @recipe.author %> | Category: <%= @recipe.category %></p>
+<h3>Ingredients</h3>
+<div><%= @recipe.ingredients %></div>
+<h3>Directions</h3>
+<div><%= @recipe.directions %></div>
+<h3>Reference</h3>
+<div><%= @recipe.reference %></div>
+<%= link_to "Back", user_recipes_path(current_user) %>
