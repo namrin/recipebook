@@ -1,5 +1,6 @@
 <h1><%= @recipe.name %></h1>
 <p>Author: <%= @recipe.author %> | Category: <%= @recipe.category %></p>
+<div><%= image_tag(@recipe.image, class:"img-thumbnail") %></div>
 <h3>Ingredients</h3>
 <div><%= @recipe.ingredients %></div>
 <h3>Directions</h3>
