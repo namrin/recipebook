@@ -6,5 +6,5 @@
 <h3>Directions</h3>
 <div><%= @recipe.directions %></div>
 <h3>Reference</h3>
-<div><%= @recipe.reference %></div>
+<div><%= link_to @recipe.reference, @recipe.reference %></div>
 <%= link_to "Back", user_recipes_path(current_user) %>

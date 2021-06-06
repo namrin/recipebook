@@ -1,8 +1,14 @@
 <h1>Recipes</h1>
-	<% @recipes.each do |recipe| %>
-		<%= recipe.name %>
-		<%= link_to "Edit", edit_user_recipe_path(recipe.user, recipe) %>
-		<%= link_to "Show", user_recipe_path(recipe.user,recipe) %>
-		<%= link_to "Delete", user_recipe_path(recipe.user,recipe), method: :delete, data: {confirm: "Are you sure?"} %><br>
-	<% end %>
+	<div class = "container">
+	<div class = "row">				
+		<% @recipes.each do |recipe| %>
+			<div class = "col-sm-auto">	
+				<%= image_tag(recipe.image, class: "img-thumbnail") %><br />
+				<%= recipe.name %>
+				<%= link_to "Edit", edit_user_recipe_path(recipe.user, recipe) %>
+				<%= link_to "Show", user_recipe_path(recipe.user,recipe) %>
+				<%= link_to "Delete", user_recipe_path(recipe.user,recipe), method: :delete, data: {confirm: "Are you sure?"} %>
+			</div>	
+		<% end %>
+	</div></div>
 <br><%= link_to "Add Recipe", new_user_recipe_path %>
